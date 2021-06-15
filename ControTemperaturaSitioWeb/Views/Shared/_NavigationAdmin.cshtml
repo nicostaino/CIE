@@ -1,0 +1,138 @@
+﻿ 
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div class="user-details">
+            <div class="pull-left">
+                <img src="~/assets/images/users/avatar-1.jpg" alt="" class="thumb-md img-circle">
+            </div>
+            <div class="user-info">
+                <div class="dropdown">
+                    @*<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">*@
+                        @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                        {
+                            var identity = ((ControlTemperaturaSitioWeb.CustomAuthentication.CustomPrincipal)HttpContext.Current.User);
+                            @Html.Label(string.Format("{0} ", identity.Name), new { @class="text-muted m-0"})
+                           
+                        }
+                       
+                        @*<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                    </ul>*@
+                </div>
+
+                <p class="text-muted m-0">Usuario</p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        <a href="@Url.Action("Index", "Home")" class="waves-effect"><i class="fa fa-home" s></i><span> Inicio </span></a>
+                    </li>
+                    var identity = ((ControlTemperaturaSitioWeb.CustomAuthentication.CustomPrincipal)HttpContext.Current.User);
+                    if (identity.IsInRole("ControlTemperaturas"))
+                    {
+
+                        <li>
+                            <a href="@Url.Action("ControlTemperatura", "home")" class="waves-effect"><i class="fa fa-stethoscope"></i><span> Temperaturas </span></a>
+                        </li>
+
+                    }
+
+                    if (identity.IsInRole("Novedades"))
+                    {
+
+                        <li>
+                            <a href="@Url.Action("Index", "Novedades")" class="waves-effect"><i class="fa fa-newspaper-o"></i><span> Novedades </span></a>
+                        </li>
+
+                    }
+                }
+
+
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    var identity = ((ControlTemperaturaSitioWeb.CustomAuthentication.CustomPrincipal)HttpContext.Current.User);
+                    if (identity.IsInRole("Capataz") || identity.IsInRole("Trabajadores") || identity.IsInRole("ListaNegra"))
+                    {
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect subdrop"><i class="md md-assignment"></i><span>Ingreso/Egreso </span><span class="pull-right"><i class="md md-remove"></i></span></a>
+                            <ul style="display: block;">
+                                <li> <a href="@Url.Action("", "IngresoEgreso")" class="waves-effect"><i class="md  md-content-paste"></i><span> Registros </span></a></li>
+                                <li> <a href="@Url.Action("EgressoIngresoUnificado", "IngresoEgreso")" class="waves-effect"><i class="md  md-content-paste"></i><span> Ingreso y Salidas Unificados </span></a></li>
+                                <li> <a href="@Url.Action("ReporteTrabajador", "IngresoEgreso")" class="waves-effect"><i class="md  md-content-paste"></i><span> Reporte Horas </span></a></li>
+                                <li> <a href="@Url.Action("Ingresos", "IngresoEgreso")" class="waves-effect"><i class="md  md-content-paste"></i><span> Ingresos </span></a></li>
+                                <li> <a href="@Url.Action("Egresso", "IngresoEgreso")" class="waves-effect"><i class="md  md-content-paste"></i><span> Salidas </span></a></li>
+                                @if (identity.IsInRole("Trabajadores"))
+                                {
+                                    <li><a href="@Url.Action("", "Trabajador")" class="waves-effect"><i class="md md-group"></i><span> Trabajadores </span></a></li>
+                                }
+                                @if (identity.IsInRole("Contratista"))
+                                {
+                                    <li><a href="@Url.Action("", "Contratista")" class="waves-effect"><i class="md md-portrait"></i><span> Contratistas </span></a></li>
+                                }
+                                @if (identity.IsInRole("ListaNegra"))
+                                {
+
+                                    <li>
+                                        <a href="@Url.Action("index", "ListaNegra")" class="waves-effect"><i class="md md-lock"></i><span> Lista de Observados </span></a>
+                                    </li>
+
+                                }
+
+                                @if (identity.IsInRole("Oficios"))
+                                {
+                                    <li><a href="@Url.Action("", "TipoTrabajador")" class="waves-effect"><i class="md md-work"></i><span>Oficios</span></a></li>
+                                }
+
+                                @if (identity.IsInRole("AdminQR"))
+                                {
+                                    <li><a href="@Url.Action("", "AdminQRs")" class="waves-effect"><i class="md  md-credit-card"></i><span>Admin QRs</span></a></li>
+                                }
+                                @if (identity.IsInRole("Contratos"))
+                                {
+                                    <li><a href="@Url.Action("", "Contrato")" class="waves-effect"><i class="md  md-credit-card"></i><span>Contratos</span></a></li>
+                                }
+
+                                @*<li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><span>Configuración</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+            <ul style="">
+
+            </ul>
+        </li>*@
+                            </ul>
+                        </li>
+                    }
+                }
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    var identity = ((ControlTemperaturaSitioWeb.CustomAuthentication.CustomPrincipal)HttpContext.Current.User);
+                    if (identity.IsInRole("Usuarios"))
+                    {
+
+                        <li class="has_sub">
+                            <a href="#" class="waves-effect"><i class="md md-settings"></i><span> Configuración </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul class="list-unstyled">
+                                @if (identity.IsInRole("Usuarios"))
+                                {
+                                    <li><a href="@Url.Action("", "Usuarios")" class="waves-effect"><i class="md md-person"></i><span> Usuarios </span></a></li>
+                                }
+
+                            </ul>
+                        </li>
+                    }
+
+                }
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

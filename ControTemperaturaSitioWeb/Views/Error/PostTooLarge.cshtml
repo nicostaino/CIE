@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Error interno del sistema";
+}
+
+<div class="error-container">
+    <i class="pe-7s-way text-success big-icon"></i>
+    <h1>3004</h1>
+    <strong>@Html.L("PostTooLargeErrorTitle")</strong>
+    <p>
+        @Html.L("PostTooLargeErrorMessage")
+    </p>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-xs btn-success">Inicio</a>
+</div>

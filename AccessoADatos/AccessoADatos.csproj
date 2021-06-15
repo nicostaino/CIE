@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{617CE6A0-759A-4413-9FC3-0E8C8AA83A4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccessoADatos</RootNamespace>
+    <AssemblyName>AccessoADatos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BeginCollectionItem, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BeginCollectionItem.1.2.1.0\lib\net35\BeginCollectionItem.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.BulkInsert, Version=6.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.BulkInsert-ef6-ext.6.0.3.1\lib\net45\EntityFramework.BulkInsert.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.MappingAPI, Version=6.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.MappingAPI.6.1.0.10\lib\net45\EntityFramework.MappingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Generics\GenericRepository.cs" />
+    <Compile Include="Core\Generics\RepositoryQuery.cs" />
+    <Compile Include="Core\Interfaces\IContext.cs" />
+    <Compile Include="AppIngresoTemperatrasContext.cs" />
+    <Compile Include="Implementaciones\EmployeeRepository.cs" />
+    <Compile Include="Implementaciones\LandRepository.cs" />
+    <Compile Include="Implementaciones\TemperatureRepository.cs" />
+    <Compile Include="Implementaciones\UserRepository.cs" />
+    <Compile Include="Migrations\202006052201363_primerMigracion.cs" />
+    <Compile Include="Migrations\202006052201363_primerMigracion.Designer.cs">
+      <DependentUpon>202006052201363_primerMigracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006071538585_SegundaMigracion.cs" />
+    <Compile Include="Migrations\202006071538585_SegundaMigracion.Designer.cs">
+      <DependentUpon>202006071538585_SegundaMigracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091300479_tercerMigracion.cs" />
+    <Compile Include="Migrations\202006091300479_tercerMigracion.Designer.cs">
+      <DependentUpon>202006091300479_tercerMigracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091304251_4Migracion.cs" />
+    <Compile Include="Migrations\202006091304251_4Migracion.Designer.cs">
+      <DependentUpon>202006091304251_4Migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091414410_5Migracion.cs" />
+    <Compile Include="Migrations\202006091414410_5Migracion.Designer.cs">
+      <DependentUpon>202006091414410_5Migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006091420580_6Migracion.cs" />
+    <Compile Include="Migrations\202006091420580_6Migracion.Designer.cs">
+      <DependentUpon>202006091420580_6Migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006101823020_7Migracion.cs" />
+    <Compile Include="Migrations\202006101823020_7Migracion.Designer.cs">
+      <DependentUpon>202006101823020_7Migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006121549406_aaa.cs" />
+    <Compile Include="Migrations\202006121549406_aaa.Designer.cs">
+      <DependentUpon>202006121549406_aaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007031809266_amaaa.cs" />
+    <Compile Include="Migrations\202007031809266_amaaa.designer.cs">
+      <DependentUpon>202007031809266_amaaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007031918033_amaaaa9.cs" />
+    <Compile Include="Migrations\202007031918033_amaaaa9.designer.cs">
+      <DependentUpon>202007031918033_amaaaa9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007071234580_4ta migracion.cs" />
+    <Compile Include="Migrations\202007071234580_4ta migracion.designer.cs">
+      <DependentUpon>202007071234580_4ta migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007071335054_5ta migracion.cs" />
+    <Compile Include="Migrations\202007071335054_5ta migracion.designer.cs">
+      <DependentUpon>202007071335054_5ta migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007071336192_6ta migracion.cs" />
+    <Compile Include="Migrations\202007071336192_6ta migracion.designer.cs">
+      <DependentUpon>202007071336192_6ta migracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131511174_nico.cs" />
+    <Compile Include="Migrations\202007131511174_nico.designer.cs">
+      <DependentUpon>202007131511174_nico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131514452_Agregamdo QR.cs" />
+    <Compile Include="Migrations\202007131514452_Agregamdo QR.designer.cs">
+      <DependentUpon>202007131514452_Agregamdo QR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131517024_Eliminando Tabla de identity.cs" />
+    <Compile Include="Migrations\202007131517024_Eliminando Tabla de identity.designer.cs">
+      <DependentUpon>202007131517024_Eliminando Tabla de identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131523291_Agregando BlackList and constractors.cs" />
+    <Compile Include="Migrations\202007131523291_Agregando BlackList and constractors.designer.cs">
+      <DependentUpon>202007131523291_Agregando BlackList and constractors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131600128_Agregando IngressEgress.cs" />
+    <Compile Include="Migrations\202007131600128_Agregando IngressEgress.designer.cs">
+      <DependentUpon>202007131600128_Agregando IngressEgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131656005_Agregando type employee.cs" />
+    <Compile Include="Migrations\202007131656005_Agregando type employee.designer.cs">
+      <DependentUpon>202007131656005_Agregando type employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007132008007_addsContractorToEmployee.cs" />
+    <Compile Include="Migrations\202007132008007_addsContractorToEmployee.designer.cs">
+      <DependentUpon>202007132008007_addsContractorToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007132021357_addsForemanToEmployee.cs" />
+    <Compile Include="Migrations\202007132021357_addsForemanToEmployee.designer.cs">
+      <DependentUpon>202007132021357_addsForemanToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007141815193_alterBlackListStructure.cs" />
+    <Compile Include="Migrations\202007141815193_alterBlackListStructure.designer.cs">
+      <DependentUpon>202007141815193_alterBlackListStructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007161425108_change TypeEmployee.cs" />
+    <Compile Include="Migrations\202007161425108_change TypeEmployee.designer.cs">
+      <DependentUpon>202007161425108_change TypeEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007161448248_change TypeEmployeeAUx.cs" />
+    <Compile Include="Migrations\202007161448248_change TypeEmployeeAUx.designer.cs">
+      <DependentUpon>202007161448248_change TypeEmployeeAUx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007161510093_change TypeEmployeeAUx1.cs" />
+    <Compile Include="Migrations\202007161510093_change TypeEmployeeAUx1.designer.cs">
+      <DependentUpon>202007161510093_change TypeEmployeeAUx1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007201620038_Elinando Nombre y Apellido.cs" />
+    <Compile Include="Migrations\202007201620038_Elinando Nombre y Apellido.designer.cs">
+      <DependentUpon>202007201620038_Elinando Nombre y Apellido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007201639242_agregar esta Activo a trabajador.cs" />
+    <Compile Include="Migrations\202007201639242_agregar esta Activo a trabajador.designer.cs">
+      <DependentUpon>202007201639242_agregar esta Activo a trabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007211246364_agregar foto a trabajador.cs" />
+    <Compile Include="Migrations\202007211246364_agregar foto a trabajador.designer.cs">
+      <DependentUpon>202007211246364_agregar foto a trabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007221351184_xx.cs" />
+    <Compile Include="Migrations\202007221351184_xx.designer.cs">
+      <DependentUpon>202007221351184_xx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007241137253_add documento .cs" />
+    <Compile Include="Migrations\202007241137253_add documento .designer.cs">
+      <DependentUpon>202007241137253_add documento .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008031416541_UserIngress-egress.cs" />
+    <Compile Include="Migrations\202008031416541_UserIngress-egress.designer.cs">
+      <DependentUpon>202008031416541_UserIngress-egress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008041831288_UserIngress-egresss.cs" />
+    <Compile Include="Migrations\202008041831288_UserIngress-egresss.designer.cs">
+      <DependentUpon>202008041831288_UserIngress-egresss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008041920061_add numbergroup.cs" />
+    <Compile Include="Migrations\202008041920061_add numbergroup.designer.cs">
+      <DependentUpon>202008041920061_add numbergroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008061546478_nuleable datetime .cs" />
+    <Compile Include="Migrations\202008061546478_nuleable datetime .designer.cs">
+      <DependentUpon>202008061546478_nuleable datetime .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008101818594_addd qr .cs" />
+    <Compile Include="Migrations\202008101818594_addd qr .designer.cs">
+      <DependentUpon>202008101818594_addd qr .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008111309267_add date las update .cs" />
+    <Compile Include="Migrations\202008111309267_add date las update .designer.cs">
+      <DependentUpon>202008111309267_add date las update .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008181408042_add is foreman.cs" />
+    <Compile Include="Migrations\202008181408042_add is foreman.designer.cs">
+      <DependentUpon>202008181408042_add is foreman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008181509593_add-FeacturedEvent.cs" />
+    <Compile Include="Migrations\202008181509593_add-FeacturedEvent.designer.cs">
+      <DependentUpon>202008181509593_add-FeacturedEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008181524126_add-FeacturedEventss.cs" />
+    <Compile Include="Migrations\202008181524126_add-FeacturedEventss.designer.cs">
+      <DependentUpon>202008181524126_add-FeacturedEventss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008201929572_add-constractors.cs" />
+    <Compile Include="Migrations\202008201929572_add-constractors.designer.cs">
+      <DependentUpon>202008201929572_add-constractors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008311857310_add-cona.cs" />
+    <Compile Include="Migrations\202008311857310_add-cona.designer.cs">
+      <DependentUpon>202008311857310_add-cona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008311912308_add-conaaaaaaaaaa.cs" />
+    <Compile Include="Migrations\202008311912308_add-conaaaaaaaaaa.designer.cs">
+      <DependentUpon>202008311912308_add-conaaaaaaaaaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009041415580_addlandId.cs" />
+    <Compile Include="Migrations\202009041415580_addlandId.designer.cs">
+      <DependentUpon>202009041415580_addlandId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009141743457_adminQR.cs" />
+    <Compile Include="Migrations\202009141743457_adminQR.designer.cs">
+      <DependentUpon>202009141743457_adminQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221224531_userEdit.cs" />
+    <Compile Include="Migrations\202009221224531_userEdit.designer.cs">
+      <DependentUpon>202009221224531_userEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011241835139_poe.cs" />
+    <Compile Include="Migrations\202011241835139_poe.designer.cs">
+      <DependentUpon>202011241835139_poe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104021806328_add lastName.cs" />
+    <Compile Include="Migrations\202104021806328_add lastName.designer.cs">
+      <DependentUpon>202104021806328_add lastName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104081125595_add contract.cs" />
+    <Compile Include="Migrations\202104081125595_add contract.designer.cs">
+      <DependentUpon>202104081125595_add contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104081330266_bug contrato oficio .cs" />
+    <Compile Include="Migrations\202104081330266_bug contrato oficio .designer.cs">
+      <DependentUpon>202104081330266_bug contrato oficio .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104192048576_Modificaciones-de-estructura.cs" />
+    <Compile Include="Migrations\202104192048576_Modificaciones-de-estructura.designer.cs">
+      <DependentUpon>202104192048576_Modificaciones-de-estructura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104122010161_fix_hiring_date.cs" />
+    <Compile Include="Migrations\202104122010161_fix_hiring_date.designer.cs">
+      <DependentUpon>202104122010161_fix_hiring_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104201400049_Validacion-Usuario.cs" />
+    <Compile Include="Migrations\202104201400049_Validacion-Usuario.designer.cs">
+      <DependentUpon>202104201400049_Validacion-Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105101858418_EgresosFromView.cs" />
+    <Compile Include="Migrations\202105101858418_EgresosFromView.designer.cs">
+      <DependentUpon>202105101858418_EgresosFromView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105121811270_taskCorrection.cs" />
+    <Compile Include="Migrations\202105121811270_taskCorrection.designer.cs">
+      <DependentUpon>202105121811270_taskCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105131907132_fixcontracts2.cs" />
+    <Compile Include="Migrations\202105131907132_fixcontracts2.designer.cs">
+      <DependentUpon>202105131907132_fixcontracts2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105131937481_rel_contrato_entrada.cs" />
+    <Compile Include="Migrations\202105131937481_rel_contrato_entrada.designer.cs">
+      <DependentUpon>202105131937481_rel_contrato_entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105131943455_fix_contractid_ingressegress.cs" />
+    <Compile Include="Migrations\202105131943455_fix_contractid_ingressegress.designer.cs">
+      <DependentUpon>202105131943455_fix_contractid_ingressegress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105141925567_viewupdate.cs" />
+    <Compile Include="Migrations\202105141925567_viewupdate.designer.cs">
+      <DependentUpon>202105141925567_viewupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Views\Shared\EditorTemplates\Collection.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clases\Clases.csproj">
+      <Project>{36b4a1cb-1821-4e0b-a299-54a6cf86b5b2}</Project>
+      <Name>Clases</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006052201363_primerMigracion.resx">
+      <DependentUpon>202006052201363_primerMigracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006071538585_SegundaMigracion.resx">
+      <DependentUpon>202006071538585_SegundaMigracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091300479_tercerMigracion.resx">
+      <DependentUpon>202006091300479_tercerMigracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091304251_4Migracion.resx">
+      <DependentUpon>202006091304251_4Migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091414410_5Migracion.resx">
+      <DependentUpon>202006091414410_5Migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006091420580_6Migracion.resx">
+      <DependentUpon>202006091420580_6Migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006101823020_7Migracion.resx">
+      <DependentUpon>202006101823020_7Migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006121549406_aaa.resx">
+      <DependentUpon>202006121549406_aaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007031809266_amaaa.resx">
+      <DependentUpon>202007031809266_amaaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007031918033_amaaaa9.resx">
+      <DependentUpon>202007031918033_amaaaa9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007071234580_4ta migracion.resx">
+      <DependentUpon>202007071234580_4ta migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007071335054_5ta migracion.resx">
+      <DependentUpon>202007071335054_5ta migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007071336192_6ta migracion.resx">
+      <DependentUpon>202007071336192_6ta migracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131511174_nico.resx">
+      <DependentUpon>202007131511174_nico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131514452_Agregamdo QR.resx">
+      <DependentUpon>202007131514452_Agregamdo QR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131517024_Eliminando Tabla de identity.resx">
+      <DependentUpon>202007131517024_Eliminando Tabla de identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131523291_Agregando BlackList and constractors.resx">
+      <DependentUpon>202007131523291_Agregando BlackList and constractors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131600128_Agregando IngressEgress.resx">
+      <DependentUpon>202007131600128_Agregando IngressEgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131656005_Agregando type employee.resx">
+      <DependentUpon>202007131656005_Agregando type employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007132008007_addsContractorToEmployee.resx">
+      <DependentUpon>202007132008007_addsContractorToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007132021357_addsForemanToEmployee.resx">
+      <DependentUpon>202007132021357_addsForemanToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007141815193_alterBlackListStructure.resx">
+      <DependentUpon>202007141815193_alterBlackListStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007161425108_change TypeEmployee.resx">
+      <DependentUpon>202007161425108_change TypeEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007161448248_change TypeEmployeeAUx.resx">
+      <DependentUpon>202007161448248_change TypeEmployeeAUx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007161510093_change TypeEmployeeAUx1.resx">
+      <DependentUpon>202007161510093_change TypeEmployeeAUx1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007201620038_Elinando Nombre y Apellido.resx">
+      <DependentUpon>202007201620038_Elinando Nombre y Apellido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007201639242_agregar esta Activo a trabajador.resx">
+      <DependentUpon>202007201639242_agregar esta Activo a trabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007211246364_agregar foto a trabajador.resx">
+      <DependentUpon>202007211246364_agregar foto a trabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007221351184_xx.resx">
+      <DependentUpon>202007221351184_xx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007241137253_add documento .resx">
+      <DependentUpon>202007241137253_add documento .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008031416541_UserIngress-egress.resx">
+      <DependentUpon>202008031416541_UserIngress-egress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008041831288_UserIngress-egresss.resx">
+      <DependentUpon>202008041831288_UserIngress-egresss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008041920061_add numbergroup.resx">
+      <DependentUpon>202008041920061_add numbergroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008061546478_nuleable datetime .resx">
+      <DependentUpon>202008061546478_nuleable datetime .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008101818594_addd qr .resx">
+      <DependentUpon>202008101818594_addd qr .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008111309267_add date las update .resx">
+      <DependentUpon>202008111309267_add date las update .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008181408042_add is foreman.resx">
+      <DependentUpon>202008181408042_add is foreman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008181509593_add-FeacturedEvent.resx">
+      <DependentUpon>202008181509593_add-FeacturedEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008181524126_add-FeacturedEventss.resx">
+      <DependentUpon>202008181524126_add-FeacturedEventss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008201929572_add-constractors.resx">
+      <DependentUpon>202008201929572_add-constractors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008311857310_add-cona.resx">
+      <DependentUpon>202008311857310_add-cona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008311912308_add-conaaaaaaaaaa.resx">
+      <DependentUpon>202008311912308_add-conaaaaaaaaaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009041415580_addlandId.resx">
+      <DependentUpon>202009041415580_addlandId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009141743457_adminQR.resx">
+      <DependentUpon>202009141743457_adminQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221224531_userEdit.resx">
+      <DependentUpon>202009221224531_userEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011241835139_poe.resx">
+      <DependentUpon>202011241835139_poe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104021806328_add lastName.resx">
+      <DependentUpon>202104021806328_add lastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104081125595_add contract.resx">
+      <DependentUpon>202104081125595_add contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104081330266_bug contrato oficio .resx">
+      <DependentUpon>202104081330266_bug contrato oficio .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104192048576_Modificaciones-de-estructura.resx">
+      <DependentUpon>202104192048576_Modificaciones-de-estructura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104122010161_fix_hiring_date.resx">
+      <DependentUpon>202104122010161_fix_hiring_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104201400049_Validacion-Usuario.resx">
+      <DependentUpon>202104201400049_Validacion-Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105101858418_EgresosFromView.resx">
+      <DependentUpon>202105101858418_EgresosFromView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105121811270_taskCorrection.resx">
+      <DependentUpon>202105121811270_taskCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105131907132_fixcontracts2.resx">
+      <DependentUpon>202105131907132_fixcontracts2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105131937481_rel_contrato_entrada.resx">
+      <DependentUpon>202105131937481_rel_contrato_entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105131943455_fix_contractid_ingressegress.resx">
+      <DependentUpon>202105131943455_fix_contractid_ingressegress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105141925567_viewupdate.resx">
+      <DependentUpon>202105141925567_viewupdate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

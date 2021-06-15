@@ -1,0 +1,85 @@
+﻿@model Clases.Models.Contract
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section Scripts
+{
+    <script>
+
+        $(".datepicker").datepicker({
+            format: "dd/mm/yyyy"
+        });
+
+        $.validator.addMethod('date',
+            function (value, element) {
+                return true; // since MVC4 data-val-date is put on EVERY vm date property. Default implementation does not allow for multiple cultures...
+            });
+
+        //$(".datepicker").datetimepicker({
+        //    format: "YYYY/MM/DD"
+        //});
+
+    </script>
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Agregar Contrato</h3></div>
+            <div class="panel-body" style="padding-bottom: 10%">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ContractorId, "ContractorId", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("ContractorId", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ContractorId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    @*"{0:dd/MM/yyyy}"*@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DateStart, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DateStart, new { htmlAttributes = new { @class = "form-control datepicker", @autocomplete = "off" } })
+                            @*@Html.ValidationMessageFor(model => model.DateStart, "", new { @class = "text-danger", placeholder = "dd/mm/yyyy" })*@
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DateEnd, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DateEnd,  new { htmlAttributes = new { @class = "form-control datepicker", @autocomplete = "off" } })
+                            @*@Html.ValidationMessageFor(model => model.DateEnd, "", new { @class = "text-danger", })*@
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div>
+

@@ -1,0 +1,41 @@
+﻿@{ 
+ ViewBag.Title = "Consulta de temperatura";
+}
+
+@section Navigation {
+    @Html.Partial("_Navigation")
+}
+
+@section Styles
+{
+    @Styles.Render("~/bundles/page/css")
+}
+
+<div id="wrapper" style="background-color: #ffffff;">
+    <div id="level0" class="level">
+        <div id="gridTemperatura" style="padding-top: 10px; padding-left: 10px;padding-right: 10px;"></div>
+    </div>
+    <div id="level1" class="level">
+        @if (HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            var identity = ((ControlTemperaturaWeb.CustomAuthentication.CustomPrincipal)HttpContext.Current.User);
+            @Html.Label(" ", new { id = "UsuarioActualemteLogeado", name = identity.Id })
+        }
+    </div>
+    <div id="level2" class="level">
+    </div>
+    <div id="level3" class="level">
+    </div>
+</div> 
+@section scripts {
+    @Scripts.Render("~/bundles/page/js")
+    <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script>
+        $(document).ready(function () {
+            Home.User = $("#UsuarioActualemteLogeado").attr("name");
+
+        //$("#modalLoginForm").modal({ backdrop: 'static', keyboard: false });
+    });
+    </script>
+}
+

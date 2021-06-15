@@ -1,0 +1,70 @@
+﻿@model ControlTemperaturaWeb.Models.LoginView
+@{
+    ViewBag.Title = "Login";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="panel panel-color panel-primary panel-pages">
+    <div class="panel-heading bg-img">
+        <div class="bg-overlay"></div>
+        <h3 class="text-center m-t-10 text-white"> Ingrese a <strong>XXX</strong> </h3>
+    </div>
+
+
+    <div class="panel-body">
+        @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal m-t-20" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+
+
+            <div class="form">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserNameView, htmlAttributes: new { @class = "control-label" })
+                    <div class="">
+                        @Html.EditorFor(model => model.UserNameView, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserNameView, "", new { @class = "text-danger" })
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                    <div class="">
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class=" float-left">
+                        <div class="">
+
+                            @Html.CheckBoxFor(m => m.RememberMe, new { @class = "  col-md-1" })
+                            @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "col-md-11 text-left" })
+                            @Html.ValidationMessageFor(model => model.RememberMe, "", new { @class = "text-danger " })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="">
+                        <input type="submit" value="Ingreso" class="btn btn-purple waves-light " />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+
+    </div>
+</div>
+
+
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

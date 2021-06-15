@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Acceso no permitido";    
+}
+
+
+<section class="content-header text-center" style="padding-top: 30px;">
+    <h1>
+       Acceso no permitido
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content text-center">
+    No tiene acceso a los recursos que intenta acceder. Contacte con los administradores del sistema para mayor información.
+    <hr>
+    @Html.ActionLink("Dashboard", "Dashboard", "Home", null, null)
+
+</section>
+
+

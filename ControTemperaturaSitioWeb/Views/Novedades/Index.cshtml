@@ -1,0 +1,235 @@
+﻿@model IEnumerable<Clases.Models.FeaturedEvent>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section Scripts
+{
+    <script>
+        var sitepath = "";
+        $(document).ready(function () {sitepath = '@(string.Format("{0}://{1}{2}",Request.Url.Scheme, Request.Url.Authority, Url.Content("~")))';
+        $('#datatable-editable').DataTable({
+            language: tableLang,
+            dom: 'Bfrtip',
+            "scrollX": true,
+            buttons: [
+                {
+                    extend: 'excel',
+                    text: '<i class="glyphicon glyphicon-save"></i> Descargar Excel',
+                    className: 'hidden exportexcel',
+                    filename: 'Novedades',
+                }]
+            });
+            $('#datepickerHasta').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es"
+            });
+            $('#datepickerDesde').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es"
+            });
+        });
+        function buscar() {
+            window.location.href = sitepath + "Novedades/Index2?desde=" + $('#datepickerDesde').val() + "&hasta=" + $('#datepickerHasta').val() + "&oficios=" + $("#checkbox1").prop('checked') + "&Contratista=" + $("#checkbox2").prop('checked') + "&Capataz=" + $("#checkbox3").prop('checked');
+        }
+
+    </script>
+    <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+
+    <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js    "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js     "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js      "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js   "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js     "></script>
+}
+<div class="panel">
+    <div class="panel-body">
+        <h4>Registros de Novedades</h4>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="m-b-30">
+
+
+                    <label>Fecha Desde</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" value="@ViewBag.Desde" id="datepickerDesde">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div><!-- input-group -->
+                </div><!-- input-group -->
+            </div><!-- input-group -->
+            <div class="col-sm-3">
+                <div class="m-b-30">
+                    <label>Fecha Hasta</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" value="@ViewBag.Hasta" id="datepickerHasta">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div><!-- input-group -->
+                </div>
+            </div>
+
+            <div class="col-sm-1">
+
+                <div class="checkbox checkbox-primary" style="padding-top: 20px;">
+                    <input id="checkbox1" type="checkbox" @ViewBag.Oficios>
+                    <label for="checkbox1">
+                        Oficios
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <div class="checkbox checkbox-primary" style="padding-top: 20px;">
+                    <input id="checkbox2" type="checkbox" @ViewBag.Contratista>
+                    <label for="checkbox2">
+                        Contratista
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <div class="checkbox checkbox-primary" style="padding-top: 20px;">
+                    <input id="checkbox3" type="checkbox" @ViewBag.Capataz>
+                    <label for="checkbox3">
+                        Capataz
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-3>
+
+                <div class="m-b-30 text-right" style="margin-top: 21px;">
+                    <a id="-" class="btn btn-primary  waves-effect waves-light " onclick="buscar()">Buscar  <i class="fa fa-search"></i></a>
+                    <a id="addToTable" onclick="$('.exportexcel').click()" class="btn btn-success waves-effect waves-light">Exportar a excel  <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped" id="datatable-editable">
+            <thead>
+                <tr>
+                    <th>
+                        Documento
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Apellido
+                    </th>
+                    <th>
+                        Sexo
+                    </th>
+                    <th>
+                        QR
+                    </th>
+                    <th>
+                        Evento
+                    </th>
+                    <th>
+                        Fecha
+                    </th>
+                    <th>
+                        Nuevo Contratista
+
+                    </th>
+                    <th>
+                        Contratista Anterior
+                    </th>
+                    <th>
+                        Nuevo Capataz
+                    </th>
+                    <th>
+                        Capataz Anterior
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(model => model.CurrentTypeEmployee.Description)*@
+                        Oficio Nuevo
+                    </th>
+
+                    <th>
+                        Oficio Anterior
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserRegister.Name)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.Documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.Sex)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.QR)
+                    </td>
+                    <td>
+                        @if (item.type.Contains("Nuevo"))
+
+                        {<span class="label label-primary">Nuevo Empleado	</span>
+                        }
+                        else
+                        {
+                            <span class="label label-success">Modificación de Empleado	</span>
+                        }
+                    </td>
+
+                    <td>
+                        @(item.IngressDateTime?.ToString("dd/MM/yyyy hh:mm:ss") ?? String.Empty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CurrentContractor.Name)
+                    </td>
+                    <td>
+                        @if (item.LastContractor != null)
+                        {
+                        @Html.DisplayFor(modelItem => item.LastContractor.Name)
+                        }
+                    </td>
+                    <td>
+                        @if (item.CurrentForeman != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.CurrentForeman.Nombre)
+                        }
+                        </td>
+                    <td>
+                        @if (item.LastForeman != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.LastForeman.Nombre)
+                        }
+                        </td>
+                    <td>
+                        @if (item.CurrentTypeEmployee != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.CurrentTypeEmployee.Description)
+                        }
+                        </td>
+
+                    <td>
+                        @if (item.LastTypeEmployee != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.LastTypeEmployee.Description)
+                        }
+                        </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserRegister.Name)
+                    </td>
+
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

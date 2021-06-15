@@ -1,0 +1,107 @@
+﻿@model Clases.Models.FeaturedEvent
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FeaturedEvent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentContractor.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentContractor.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentForeman.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentForeman.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentTypeEmployee.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentTypeEmployee.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastContractor.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastContractor.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastForeman.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastForeman.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastTypeEmployee.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastTypeEmployee.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserRegister.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserRegister.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IngressDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IngressDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

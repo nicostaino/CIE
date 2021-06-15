@@ -1,0 +1,168 @@
+﻿/*Fonts*/
+body, body *, .btn, .fa, div.modal-dialog div.modal-body div.bootstrap-dialog-message, .form-control, #logo.light-version span, #logo span, .hbreadcrumb {
+    font-size: 11px;
+}
+
+/*Colores*/
+.colorAzul {
+    color: #34495e;
+}
+
+/* Menu*/
+.fixed-sidebar #menu {
+    overflow-y: inherit !important; 
+}
+
+/*Sweet Alert*/
+.swal-button {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 10px 16px;
+    font-size: 11px;
+}
+.swal-button.swal-button--confirm:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.swal-button.swal-button--confirm:active {
+    background-color: #34495e;
+}
+.swal-button--confirm {
+    background-color: #34495e;
+}
+.swal-text {
+    text-align: center;
+    font-size: 11px;
+}
+
+.swal-footer {
+    text-align:center;
+}
+
+/*font size 11px*/
+.swal2-modal .swal2-styled {    
+    font-size: 11px !important;   
+}
+
+/*Text transform*/
+.transform-none {
+    text-transform: none;
+}
+
+/*Display*/
+.display-inline {
+    display: inline;
+}
+
+/*Action Button*/
+.btnIcon {
+    padding: 6px 10px;
+}
+
+.btnIcon i {
+    font-size: 13px;
+}
+
+.fa {
+    font-size: 13px;
+}
+
+/*Checkbox*/
+input[type=checkbox] {
+    transform: scale(1.5);
+    right: 4px;
+    top: 1px;
+}
+
+/*Pointer*/
+.clickable {
+    cursor: pointer;
+}
+
+/*Spinners*/
+/* hide up/down arrows ("spinners") on input fields marked type="number" */
+.no-spinners {
+    -moz-appearance:textfield;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Footer*/
+footer.ternium-layout {
+    background-color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    padding: 3px 15px 0 15px;
+}
+
+footer.ternium-layout label {
+    font-size: 11px;
+    padding-left: 5px;
+}
+
+/*DataTable*/
+div.dataTables_scrollBody>table>tbody>tr:first-child>td {
+    border-top: 1px solid #ddd !important;
+}
+
+/*Datepicker*/
+.datepicker table tr td.today {
+    color: #FFFFFF !important;
+    background: #3498db !important;
+    border-color: #3498db !important;
+}
+
+/*fondo blanco contenedor principal*/
+#wrapper {
+    background: #fff;
+}
+
+/*centrar el filename de los input file upload*/
+.filename-center {
+    padding-top: 7px;
+    display: inline-block;
+}
+
+/*tiles pantalla principal*/
+.p-none {
+    padding: 0px !important;
+}
+
+/*centra los tres punticos del menu*/
+.navbar-nav > li > a {
+    font-size: 13px;
+}
+
+.text-gray {
+    color: #8c8c8c
+}
+
+.force-font-14 {
+    font-size: 14px !important
+}
+
+.btn, .form-control {
+    text-transform: uppercase;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.hpanel.no-border .panel-body {
+    border: none !important;
+}
+
+.force-text-left {
+    text-align: left !important;
+}
+
+.p-l-15 {
+    padding-left: 15px;
+}
+ 

@@ -1,0 +1,213 @@
+﻿@{
+    ViewBag.Title = "Reporte de Trabajador";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Scripts
+{
+    <script>
+        var sitepath = "";
+
+        $(document).ready(function () {
+            $.fn.dataTable.moment('DD/MM/YYYY');
+            //$('#datatable-hours').hide();
+            sitepath = '@(string.Format("{0}://{1}{2}",Request.Url.Scheme, Request.Url.Authority, Url.Content("~")))';
+
+            $('input.advancedAutoComplete').typeahead({
+                source: function (query, process) {
+                    return $.get('/IngresoEgreso/GetEmployeesByCriteria', { criteria: $("input#employee").val() }, function (data) {
+                        return process(data);
+                    });
+                },
+                afterSelect: function (obj) {
+                    console.log(obj)
+                    $('#employeeId').val(obj.id);
+                }
+            });
+
+            $('#datepickerHasta').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es"
+            });
+            $('#datepickerDesde').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es"
+            });
+
+        })
+
+        function buscar() {
+            $('#datatable-hours').show();
+            $('#datatable-hours').DataTable({
+                language: tableLang,
+                dom: 'Bfrtip',
+                //serverSide: true,
+                destroy: true,
+                processing: true,
+                order: [['0', 'asc']],
+                ajax:
+                {
+                    "url": "/IngresoEgreso/GetDataByCriteria",
+                    "type": "POST",
+                    "dataType": "JSON",
+                    data: {
+                        "desde": $("#datepickerDesde").val(),
+                        "hasta": $("#datepickerHasta").val(),
+                        "employeeId": $('#employeeId').val()
+                    }
+                },
+                buttons: [
+                    {
+                        extend: 'excel',
+                        text: '<i class="glyphicon glyphicon-save"></i> Descargar Excel',
+                        className: 'hidden exportexcel',
+                        filename: 'Ingreso y Egresos'
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        text: '<i class="glyphicon glyphicon-save"></i> Descargar PDF',
+                        className: 'hidden exportpdf',
+                        filename: 'Ingreso y Egresos pdf',
+                        exportOptions: {
+                            columns: [1, 2, 3]
+                        },
+                        customize: function (doc) {
+                            doc.content[0].text = "Registro de ingresos y egresos\n\nEmpleado: " + $("#employee").val() + "\n Periodo: " + $("#datepickerDesde").val() + " al " + $("#datepickerHasta").val()
+                            doc.content[1].table.headerRows = 0;
+                            doc.content[1].table.widths = ['33%', '33%', '33%']
+                            doc.styles.tableBodyEven.alignment = 'center';
+                            doc.styles.tableBodyOdd.alignment = 'center';
+                            doc['footer'] = (function (page, pages) {
+                                return {
+                                    columns: [
+                                        '\n____________________________________',
+                                        {
+                                            alignment: 'right',
+                                            text: [{ text: page.toString() }, ' / ', { text: pages.toString() }]
+                                        }
+                                    ],
+                                    margin: [10, 0]
+                                }
+                            });
+                        }
+                    }
+                ],
+                //columnDefs: [
+                //    {
+                //        "targets": 0,
+                //        "type": "date" 
+                //    }
+                //],
+                order: ["0", "asc"],
+                columns: [
+                    {
+                        data: "Id",
+                        visible: false
+                    },
+                    {
+                        data: null,
+                        render: function (d) {
+                            var date = new Date(parseInt((d.WorkDate).match(/\d+/)[0]))
+                            return moment(date).format('DD/MM/YYYY');
+                        }
+                    },
+                    {
+                        data: null,
+                        render: function (d) {
+                            var date = new Date(parseInt((d.IngressDateTime).match(/\d+/)[0]))
+                            return moment(date).format('HH:mm A');
+                        }
+                    },
+                    {
+                        data: null,
+                        render: function (d) {
+                            if (d.EgressDateTime != null) {
+                                var date = new Date(parseInt((d.EgressDateTime).match(/\d+/)[0]))
+                                return moment(date).format('HH:mm A');
+                            }
+                            return '';
+                        }
+                    }
+                ]
+            });
+        }
+
+    </script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js    "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js     "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js      "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js   "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js     "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js     "></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.15/sorting/datetime-moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+
+}
+<div class="panel">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="m-b-30">
+                    <label>Nombre y Apellidos</label>
+                    <div class="input-group">
+                        <input type="hidden" class="form-control" id="employeeId">
+                        <input class="form-control advancedAutoComplete" type="text" id="employee" autocomplete="on">
+
+
+                        <span class="input-group-addon"><i></i></span>
+                    </div><!-- input-group -->
+                </div><!-- input-group -->
+            </div><!-- input-group -->
+            <div class="col-sm-2">
+                <div class="m-b-30">
+                    <label>Fecha Desde</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" id="datepickerDesde" autocomplete="off">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div><!-- input-group -->
+                </div><!-- input-group -->
+            </div><!-- input-group -->
+            <div class="col-sm-2">
+                <div class="m-b-30">
+                    <label>Fecha Hasta</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" id="datepickerHasta" autocomplete="off">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div><!-- input-group -->
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="m-b-30 text-right" style="margin-top: 21px;">
+                    <a id="btnSearch" class="btn btn-primary  waves-effect waves-light" onclick="buscar()">Buscar  <i class="fa fa-search"></i></a>
+                    <a id="addToTable" onclick="$('.exportexcel').click()" class="btn btn-success waves-effect waves-light">Exportar a excel  <i class="fa fa-plus"></i></a>
+                    <a id="addToPDF" onclick="$('.exportpdf').click()" class="btn btn-success waves-effect waves-light">Exportar PDF  <i class="fa fa-plus"></i></a>
+                    @*<a id="addToTable" onclick="$('.exportVisma').click()" class="btn btn-success waves-effect waves-light">Exportar a Visma  <i class="fa fa-plus"></i></a>*@
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped" id="datatable-hours" width="100%" style="display: none">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>
+                        Fecha Registro
+                    </th>
+                    <th>
+                        Hora Ingreso
+                    </th>
+                    <th>
+                        Hora Egreso
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- end: page -->
+</div>

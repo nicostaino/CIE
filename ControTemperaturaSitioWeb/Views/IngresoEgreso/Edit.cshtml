@@ -1,0 +1,223 @@
+﻿@model Clases.Models.IngressEgress
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section Scripts
+{
+    <script>
+        var myJsVariable = '@ViewBag.ErrorMsg';
+        
+            $("#" + '@ViewBag.Accion').prop('checked', true);
+            console.log(@ViewBag.Accion);
+        setTimeout(function () {
+            let habilitado = ($('#Egreso').prop('checked'));
+            console.log(habilitado);
+            HabilitarIngreso(!habilitado);
+             
+        }, 1000);
+
+
+    function HabilitarIngreso(action){
+    if(action){
+    ($("#RetiredBefore").parent()).hide();
+    ($("#DescriptionOut").parent().parent()).hide();
+    ($("#IngressDateTime").parent().parent()).show();
+    ($("#EgressDateTime").parent().parent()).hide();
+    //$("#DocumentEmployee").hide();
+    //($("#EmployeeId").parent().parent()).show();
+    ($("#DocumentForeman").parent().parent()).show();
+    ($("#ForemanId").parent().parent()).show();
+
+    ($("#ContractorId").parent().parent()).show();
+    ($("#TypeEmployeeId").parent().parent()).show();
+    ($("#groupNumber").parent().parent()).show();
+    ($("#isForeman").parent().parent()).show();
+    ($("#UserIdIngressRegister").parent().parent()).show();
+
+    ($("#UserId").parent().parent()).hide();
+    }else{
+     ($("#UserIdIngressRegister").parent().parent()).hide();
+
+    ($("#UserId").parent().parent()).show();
+
+    ($("#RetiredBefore").parent()).show();
+    ($("#DescriptionOut").parent().parent()).show();
+    ($("#IngressDateTime").parent().parent()).hide();
+    ($("#EgressDateTime").parent().parent()).show();
+    ($("#DocumentForeman").parent().parent()).hide();
+    ($("#ForemanId").parent().parent()).hide();
+
+    ($("#ContractorId").parent().parent()).hide();
+    ($("#TypeEmployeeId").parent().parent()).hide();
+    ($("#groupNumber").parent().parent()).hide();
+    ($("#isForeman").parent().parent()).hide();
+
+
+    }
+    $("#RetiredBefore").prop("disabled",action);
+    $("#DescriptionOut").prop("disabled",action);
+    $("#IngressDateTime").prop("disabled",!action);
+    $("#EgressDateTime").prop("disabled",action);
+    //$("#DocumentEmployee").prop("disabled",action);
+
+    $("#DocumentForeman").prop("disabled",!action);
+    $("#ForemanId").prop("disabled",!action);
+
+    $("#ContractorId").prop("disabled",!action);
+    $("#TypeEmployeeId").prop("disabled" ,!action);
+    $("#groupNumber").prop("disabled",!action);
+    $("#isForeman").prop("disabled",!action); 
+            $('#EgressDateTime').datetimepicker({
+             format: "DD/MM/YYYY hh:mm"
+            });
+
+
+     $('#IngressDateTime').datetimepicker({
+                format: "DD/MM/YYYY hh:mm"
+            });
+    seRetiroAntes();
+    }
+    function seRetiroAntes (){
+
+     var habilitarDescripcionseRetiroAntes=$("#RetiredBefore:checked").length==1 ;
+        $("#DescriptionOut").prop("disabled",!habilitarDescripcionseRetiroAntes);
+       if(!habilitarDescripcionseRetiroAntes){
+     $("#DescriptionOut").val("");
+    }
+    }
+    HabilitarIngreso(true);
+    seRetiroAntes();
+  $("#RetiredBefore").click(seRetiroAntes);
+
+
+    </script>
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Editar Ingreso/Egreso</h3></div>
+
+            <div class="panel-body">
+                <div class="text-danger">@ViewBag.ErrorMsg</div>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+
+
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label col-md-2"> Operacion  </label>
+                                <label class="radio-inline" style="margin-left: 18px;"    ><input disabled type="radio" id="Ingreso" name="optradio" checked>Ingreso</label>
+                                <label class="radio-inline"><input type="radio" name="optradio" disabled  id="Egreso">Egreso</label>
+                            </div>
+                            <div class="">
+                                <label class="control-label col-md-2"> Se retiro antes?  </label>
+                                @Html.CheckBoxFor(m => m.RetiredBefore, new { @class = "col-md-1", @style = "margin-top:10px;" })
+                                @Html.ValidationMessageFor(model => model.RetiredBefore, "", new { @class = "text-danger " })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2"> Motivo ?  </label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.DescriptionOut, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                @Html.ValidationMessageFor(model => model.DescriptionOut, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="control-label col-md-2">Fecha / Hora Ingreso </label>
+                            <div class="col-md-10">
+                                <input class="form-control text-box single-line" data-val="true" data-val-date="The field EgressDateTime must be a date." id="IngressDateTime" name="IngressDateTime" type="datetime" value="@ViewBag.IngressDate">
+                              
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Fecha / Hora Egreso </label>
+                            <div class="col-md-10"> 
+                                <input class="form-control text-box single-line" data-val="true" data-val-date="The field EgressDateTime must be a date." id="EgressDateTime" name="EgressDateTime" type="datetime" value="@ViewBag.EgressDate">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Empleado</label>
+                            <div class="col-md-10">
+                                @Html.DropDownList("EmployeeId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.EmployeeId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                    <label class="control-label col-md-2">Documento Capataz</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DocumentForeman, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DocumentForeman, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Capataz</label>
+
+                            <div class="col-md-10">
+                                @Html.DropDownList("ForemanId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ForemanId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Contratista</label>
+                            <div class="col-md-10">
+                                @Html.DropDownList("ContractorId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ContractorId, "", new { @class = "text-danger" })
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="control-label col-md-2">Tipo de empleado </label>
+                            <div class="col-md-10">
+                                @Html.DropDownList("TypeEmployeeId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.TypeEmployeeId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">N° Cuadrilla </label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.groupNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.groupNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="">
+                                <label class="control-label col-md-2">Es capataz?</label>
+                                @Html.CheckBoxFor(m => m.isForeman, new { @class = "col-md-1", @style = "margin-top:10px;" })
+                                @Html.ValidationMessageFor(model => model.isForeman, "", new { @class = "text-danger " })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Editar" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div>
+
+

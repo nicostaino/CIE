@@ -1,0 +1,49 @@
+﻿@model Clases.Models.AdminQR
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Editar Admin QR </h3></div>
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>AdminQR</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Id)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.QR, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.QR, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.QR, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                 
+                    <div class="form-group ">
+                        <div class="">
+                            @Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2 " })
+                            @Html.CheckBoxFor(m => m.Active, new { @class = "col-md-1", @style = "margin-top:10px;" })
+                            @Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger " })
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Editar" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div>

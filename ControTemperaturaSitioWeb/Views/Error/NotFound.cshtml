@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Página no encontrada";
+}
+
+ 
+
+<div class="ex-page-content text-center">
+    <h1>404!</h1>
+    <h2>Página no encontrada</h2><br>
+    <p> Lo sentimos, pero la página que está buscando no ha sido encontrada. Comprueba que la URL sea correcta y luego pulsa el botón actualizar en tu navegador o intenta buscar algo más en nuestro sitio.</p>
+
+    <br>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-purple waves-effect waves-light">Inicio</a>
+</div>

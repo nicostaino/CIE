@@ -1,0 +1,18 @@
+﻿@model ControlTemperaturaSitioWeb.Models.Error.ExceptionViewModel
+
+@{
+    ViewBag.Title = "Error del Sistema";
+}
+
+<section class="content-header text-center" style="padding-top: 30px;">
+    <h1>
+        Error Interno
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content text-center">
+    @Model.Message
+    <hr>
+    @Html.ActionLink("Dashboard", "Dashboard", "Home", null, null)
+</section>

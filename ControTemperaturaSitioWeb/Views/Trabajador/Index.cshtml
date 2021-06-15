@@ -1,0 +1,246 @@
+﻿@model IEnumerable<Clases.Models.Employee>
+
+@section Scripts
+{
+    <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js    "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js     "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js      "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js   "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js     "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js     "></script>
+    <script>
+        $.fn.dataTable.ext.order['dom-checkbox'] = function (settings, col) {
+            return this.api().column(col, { order: 'index' }).nodes().map(function (td, i) {
+                return $('input', td).prop('checked') ? '1' : '0';
+            });
+        }
+        $('#datatable-editable').DataTable({
+            language: tableLang, scrollX: true, dom: 'Bfrtip',
+            "scrollX": true,
+            buttons: [
+                {
+                    extend: 'excel',
+                    text: '<i class="glyphicon glyphicon-save"></i> Descargar Excel',
+                    className: 'hidden exportexcel',
+                    filename: 'Trabajadores',
+                }],
+            columnDefs: [
+                { "orderable": false, "targets": [0] },
+                {
+                    targets: [10, 11, 12],
+                    orderDataType: 'dom-checkbox'
+                }
+            ],
+
+            "scrollY": "60vh",
+            "scrollCollapse": true,
+            "paging": false
+        });
+
+
+
+        function Deshabilitar() {
+            var data = $("#datatable-editable").DataTable().rows($(".ckbhijo:checked").parent().parent().parent()).data().toArray();
+
+
+            var varToSend = [];
+            data.forEach(function (ite, index) {
+                console.log(ite);
+                varToSend.push(ite[1]);
+            });
+            $.ajax({
+                type: "POST",
+                url: sitepath + "Trabajador/deshabilitar",
+                data: { listaEmpleados: varToSend },
+                success: function (result) {
+                    //   location.reload();
+                    ($(".ckbhijo:checked").parent().parent().parent()).find(".IsActive > input").prop("checked", false)
+                    $(".ckbhijo").prop("checked", false);
+                    $("#ckbAll").prop("checked", false);
+                }
+            });
+        }
+        function Habilitar() {
+            var data = $("#datatable-editable").DataTable().rows($(".ckbhijo:checked").parent().parent().parent()).data().toArray();
+            var varToSend = [];
+            data.forEach(function (ite, index) {
+                console.log(ite);
+                varToSend.push(ite[1]);
+            });
+            $.ajax({
+                type: "POST",
+                url: sitepath + "Trabajador/habilitar",
+                data: { listaEmpleados: varToSend },
+                success: function (result) {
+
+                    ($(".ckbhijo:checked").parent().parent().parent()).find(".IsActive > input").prop("checked", true)
+                    $(".ckbhijo").prop("checked", false);
+                    $("#ckbAll").prop("checked", false);
+
+                }
+            });
+        }
+
+
+        function checkAll() {
+            $(".ckbhijo").prop("checked", $("#ckbAll:checked").length == 1);
+            $("#btndeshabilitar").prop("disabled", $(".ckbhijo:checked").length == 0);
+            $("#btnhabilitar").prop("disabled", $(".ckbhijo:checked").length == 0);
+        }
+        function checkOne() {
+            $("#ckbAll").prop("checked", $(".ckbhijo:checked").length == $(".ckbhijo").length);
+            $("#btndeshabilitar").prop("disabled", $(".ckbhijo:checked").length == 0);
+            $("#btnhabilitar").prop("disabled", $(".ckbhijo:checked").length == 0);
+        }
+    </script>
+}
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="panel">
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="m-b-30">
+                    <h4>Trabajadores</h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="m-b-30 text-right">
+                    <a id="addToTable" class="btn btn-primary waves-effect waves-light" href="@Url.Action("Create")">Agregar <i class="fa fa-plus"></i></a>
+                    <button id="btndeshabilitar" class="btn btn-info waves-effect waves-light" disabled onclick="Deshabilitar()">Deshabilitar <i class="md md-lock"></i></button>
+                    <button id="btnhabilitar" class="btn btn-success waves-effect waves-light" disabled onclick="Habilitar()">Habilitar <i class="fa  fa-unlock"></i></button>
+                    <a id="addToTable" onclick="$('.exportexcel').click()" class="btn btn-success waves-effect waves-light">Exportar a excel  <i class="fa fa-plus"></i></a>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped" id="datatable-editable">
+            <thead>
+                <tr>
+                    <th>   <label onclick="checkAll()"><input id="ckbAll" type="checkbox"> Todos</label></th>
+                    <th>
+                        Documento
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Apellido
+                    </th>
+                    <th>
+                        Contratista
+                    </th>
+                    <th>
+                        Nombre Capataz
+                    </th>
+                    <th>
+                        Campo
+                    </th>
+                    <th>
+                        QR
+                    </th>
+                    <th>
+                        Fecha Creación
+                    </th>
+                    <th>
+                        Numero Cuadrilla
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sex)
+                    </th>
+                    <th style="text-align: center;">
+                        @Html.DisplayNameFor(model => model.Local)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TypeEmployee)
+                    </th>
+                    <th style="text-align: center;">
+                        @Html.DisplayNameFor(model => model.isforeman)
+                    </th>
+                    <th style="text-align: center;">
+                        @Html.DisplayNameFor(model => model.isActive)
+                    </th>
+
+                    <th style="width:25px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>   <label onclick="checkOne()"><input style="margin-left: 11px !important;" type="checkbox" class="ckbhijo"></label></td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contractor.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Foreman.Nombre) @Html.DisplayFor(modelItem => item.Foreman.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Land.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QR)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Img)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.groupNumber)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sex)
+                    </td>
+                    <td style="text-align: center;">
+                        @Html.DisplayFor(modelItem => item.Local)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypeEmployee.Description)
+                    </td>
+                    <td style="text-align: center;">
+                        @Html.DisplayFor(modelItem => item.isforeman)
+                    </td>
+                    <td style="text-align: center;" class="IsActive">
+                        @Html.DisplayFor(modelItem => item.isActive)
+
+
+                    </td>
+                    <td style="width:25px;">
+
+                        <a href="@Url.Action("Edit", "Trabajador", new { id = item.Id })" class="on-default edit-row" title=" Editar Trabajador"><i class="fa fa-pencil"></i></a>
+                        <a href="@Url.Action("Details", "Trabajador", new { id = item.Id })" class="on-default edit-row" title=" Ver perfil del Trabajador"><i class="md md-account-circle"></i></a>
+                        @*<a href="@Url.Action("Delete", "Trabajador", new { id = item.Id })" class="on-default remove-row" title=" Borrar Trabajador"><i class="fa fa-trash-o"></i></a>*@
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- end: page -->
+
+</div>
+
+

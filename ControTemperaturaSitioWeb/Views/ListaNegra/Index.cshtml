@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Clases.Models.BlackList>
+
+@section Scripts
+{
+    <script>
+        $('#datatable-editable').DataTable({ language: tableLang });
+    </script>
+}
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="panel">
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="m-b-30">
+                    <h4>Personas en la Lista de Observados</h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="m-b-30 text-right">
+                    <a id="addToTable" class="btn btn-primary waves-effect waves-light" href="@Url.Action("Create")">Agregar <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped" id="datatable-editable">
+            <thead>
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Documento)
+                    </th>
+                     <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AdmissionDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Reason)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserRegister.Name)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AdmissionDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reason)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserRegister.Name)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "ListaNegra", new { id = item.Id })" class="on-default edit-row" title=" Editar Usuario en Lista de Observados"><i class="fa fa-pencil"></i></a>
+                        @*<a href="@Url.Action("Details", "Usuarios", new { id = item.Id })" class="on-default edit-row" title=" Editar Usuario"><i class="fa fa-pencil"></i></a>*@
+                        <a href="@Url.Action("Delete", "ListaNegra", new { id = item.Id })" class="on-default remove-row" title=" Borrar Usuario de la Lista de Observados"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- end: page -->
+
+</div>
+ 

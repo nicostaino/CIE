@@ -1,0 +1,384 @@
+﻿@model Clases.Models.Employee
+@section Scripts
+{
+    <script>
+        $('#datatable-editable').DataTable({ language: tableLang});
+    </script>
+}
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="bg-picture text-center" style="background-image:url('/assets/images/big/bg1.jpg')">
+            <div class="bg-picture-overlay"></div>
+            <div class="profile-info-name">
+                @if (Model.Img == null)
+                {
+                    <img src="~/assets/images/users/avatar-1.jpg" style="width: 200px;height: 200px;" class="thumb-lg img-circle img-thumbnail" alt="profile-image">
+
+                }
+                else
+                {
+                    <img src="@Model.Img" style="width: 200px;height: 200px;" class="thumb-lg img-circle img-thumbnail" alt="profile-image">
+
+                }
+                    <h3 class="text-white"> @Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)  </h3>
+            </div>
+        </div>
+        <!--/ meta -->
+    </div>
+</div>
+<div class="row user-tabs">
+    <div class="col-sm-9 col-lg-9">
+        <ul class="nav nav-tabs tabs" style="width: 100%;">
+            <li class="active tab" style="width: 25%;">
+                <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active">
+                    <span class="visible-xs"><i class="fa fa-home"></i></span>
+                    <span class="hidden-xs">Sobre @Html.DisplayFor(model => model.Nombre.Split(' ')[0])</span>
+                </a>
+            </li>
+            <li class="tab" style="width: 25%;">
+                <a href="#profile-2" data-toggle="tab" aria-expanded="false">
+                    <span class="visible-xs"><i class="fa fa-user"></i></span>
+                    <span class="hidden-xs">Registros de entradas</span>
+                </a>
+            </li>
+            @*<li class="tab" style="width: 25%;">
+                <a href="#messages-2" data-toggle="tab" aria-expanded="true">
+                    <span class="visible-xs"><i class="fa fa-envelope-o"></i></span>
+                    <span class="hidden-xs">Registro Temperaturas</span>
+                </a>
+            </li>*@
+            @*<li class="tab" style="width: 25%;">
+                <a href="#settings-2" data-toggle="tab" aria-expanded="false">
+                    <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                    <span class="hidden-xs">Observaciones</span>
+                </a>
+            </li>
+            <div class="indicator" style="right: 602px; left: 0px;"></div>
+            <div class="indicator" style="right: 602px; left: 0px;"></div>*@
+        </ul>
+    </div>
+    <div class="hidden-xs col-sm-3 col-lg-3">
+        <div class="pull-right">
+            @*<div class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle btn-rounded btn btn-primary waves-effect waves-light" href="#"> Novedades <span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li><a href="#">Destacada</a></li>
+                    <li><a href="#">Falta</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Observación</a></li>
+                </ul>
+            </div>*@
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+
+        <div class="tab-content profile-tab-content">
+            <div class="tab-pane active" id="home-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Personal-Information -->
+                        <div class="panel panel-default panel-fill">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Información Personal</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="about-info-p">
+                                    <strong>Nombre completo</strong>
+                                    <br>
+                                    <p class="text-muted">@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)</p>
+                                </div>
+                                <div class="about-info-p">
+                                    <strong>Documento</strong>
+                                    <br>
+                                    <p class="text-muted">@Html.DisplayFor(model => model.Documento)</p>
+                                </div>
+                                <div class="about-info-p">
+                                    <strong>Trabaja en </strong>
+                                    <br>
+                                    <p class="text-muted">@Html.DisplayFor(model => model.Land.Name)</p>
+                                </div>
+                                <div class="about-info-p m-b-0">
+                                    <strong>Esta en Planilla?</strong>
+                                    <br>
+                                    <p class="text-muted">
+                                        @if (Model.Local)
+                                        {<span class="label label-inverse">Si</span> }
+                                        else
+                                        {
+                                            <span class="label label-purple">No</span>
+                                        }
+                                    </p>
+                                </div>
+                                <div class="about-info-p m-b-0">
+                                    <strong>Es capataz?</strong>
+                                    <br>
+                                    <p class="text-muted">
+                                        @if (Model.isforeman)
+                                        {<span class="label label-inverse">Si</span> }
+                                        else
+                                        {
+                                            <span class="label label-purple">No</span>
+                                        }
+                                    </p>
+                                </div>
+                                @if (!Model.isforeman)
+                                {
+
+                                    <div class="about-info-p m-b-0">
+                                        <strong>A cargo del capataz</strong>
+                                        <br>
+                                        <p class="text-muted">
+                                            @if (Model.Foreman != null)
+                                            {
+                                                @Model.Foreman.Nombre @Model.Foreman.Apellido
+                                            }
+
+                                        </p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <!-- Personal-Information -->
+                        <!-- Languages -->
+                    
+                        <!-- Languages -->
+
+                    </div>
+
+
+                    <div class="col-md-8">
+                        <!-- Personal-Information -->
+                        <div class="panel panel-default panel-fill">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Historial de tarjetas</h3>
+                            </div>
+                            <div class="panel-body">
+
+                                <table class="table table-bordered table-striped" id="datatable-editable">
+                                    <thead>
+                                        <tr>
+
+                                            <th>
+                                                Código
+                                            </th>
+                                            <th>Fecha de Registro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.QRHistory)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Codigo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.RegistrationDate)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Personal-Information -->
+
+                        @*<div class="panel panel-default panel-fill">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Caracteristicas</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="m-b-15">
+                                    <h5>Puntualidad <span class="pull-right">60%</span></h5>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-primary wow animated progress-animated animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%; visibility: visible; animation-name: animationProgress;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="m-b-15">
+                                    <h5>Asistencia <span class="pull-right">90%</span></h5>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-pink wow animated progress-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; visibility: hidden; animation-name: none;">
+                                            <span class="sr-only">90% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="m-b-15">
+                                    <h5>Comportamiento <span class="pull-right">80%</span></h5>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-purple wow animated progress-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; visibility: hidden; animation-name: none;">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="tab-pane" id="profile-2" style="display: none;">
+                <!-- Personal-Information -->
+                <div class="panel panel-default panel-fill">
+
+                    <div class="panel-body">
+
+                        <table class="table table-bordered table-striped" id="datatable-editable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        Documento
+                                    </th>
+                                    <th>
+                                        Acción
+                                    </th>
+                                    <th>
+                                        Registro la salida
+                                    </th>
+                                    <th>
+                                        Se retiro especial?
+                                    </th>
+                                    <th>
+                                        Descripción salida
+                                    </th>
+                                    <th>
+                                        Oficio
+                                    </th>
+                                    <th>
+                                        Su capataz es
+                                    </th>
+                                    <th>
+                                        Contratista
+                                    </th>
+                                    <th>
+                                        Fecha registro
+                                    </th>
+
+                                    <th>Hora registro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in ViewBag.Ingresos)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.Employee.Nombre  @item.Employee.Apellido
+                                        </td>
+                                        <td>
+                                            @item.Employee.Documento
+                                        </td>
+                                        <td>
+                                            @if (item.Accion == "Ingreso")
+
+                                            {<span class="label label-primary">Ingreso</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="label label-success">Egreso</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            @*@item.User.Name*@
+                                        </td>
+                                        <td>
+                                            @if (item.Accion != "Ingreso")
+                                            {
+                                                if (item.retiredbefore == 0)
+                                                {<span class="label label-primary">No</span> }
+                                                else
+                                                {
+                                                    <span class="label label-danger">Si</span>
+                                                }
+                                            }
+
+
+                                        </td>
+                                        <td>
+                                            @item.descriptionout
+                                        </td>
+                                        <td>
+                                            @item.TypeEmployee.Description
+                                        </td>
+                                        <td>
+                                            @item.Foreman.Nombre   @item.Foreman.Apellido
+                                        </td>
+                                        <td>
+                                            @item.Contractor.Name
+                                        </td>
+
+                                        <td>
+                                            @item.egressDateTime.ToString("dd/MM/yyyy")
+                                        </td>
+                                        <td>
+                                            @item.egressDateTime.ToString("hh:mm:ss")
+                                        </td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <!-- Personal-Information -->
+            </div>
+
+
+
+            <div class="tab-pane" id="messages-2" style="display: none;">
+                <!-- Personal-Information -->
+                <div class="panel panel-default panel-fill">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Registro de temperaturas de @Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <div id="gridTemperatura" style="padding-top: 10px; padding-left: 10px;padding-right: 10px;" class="pg-content"><div id="containergridTemperatura_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="dt-buttons"><button class="dt-button buttons-excel buttons-html5 hidden exportexcel" tabindex="0" aria-controls="containergridTemperatura" type="button"><span><i class="glyphicon glyphicon-save"></i> Descargar Excel</span></button> </div><div id="containergridTemperatura_filter" class="dataTables_filter"><button style="margin-right: 10px;" class="btn btn-success" id="btnDescargarExel"><i class="glyphicon glyphicon-save"></i>Generar Excel</button><label>Buscar:<input type="search" class="form-control input-sm" placeholder="" aria-controls="containergridTemperatura"></label></div><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 1376px; padding-right: 0px;"><table class="display table responsive dataTable no-footer" style="width: 1376px; margin-left: 0px;" data-effect="bounceInLeft" role="grid"><thead><tr role="row"><th class="sorting" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 167px;" aria-label="Fecha Registro: Activar para ordenar la columna de manera ascendente">Fecha Registro</th><th class="sorting" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 71px;" aria-label="DNI: Activar para ordenar la columna de manera ascendente">DNI</th><th class="sorting" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 149px;" aria-label="Temperatura: Activar para ordenar la columna de manera ascendente">Temperatura</th><th class="sorting" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 181px;" aria-label="Tipo Trabajador: Activar para ordenar la columna de manera ascendente">Tipo Trabajador</th><th class="sorting_asc" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 303px;" aria-label="Nombre Trabajador: Activar para ordenar la columna de manera descendente" aria-sort="ascending">Nombre Trabajador</th><th class="sorting" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 101px;" aria-label="Campo: Activar para ordenar la columna de manera ascendente">Campo</th><th class="sorting" tabindex="0" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 173px;" aria-label="Registrado Por: Activar para ordenar la columna de manera ascendente">Registrado Por</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 62vh;"><table id="containergridTemperatura" class="display table responsive dataTable no-footer" style="width: 100%;" data-effect="bounceInLeft" role="grid"><thead><tr role="row" style="height: 0px;"><th class="sorting" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 167px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Fecha Registro: Activar para ordenar la columna de manera ascendente"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Fecha Registro</div></th><th class="sorting" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 71px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="DNI: Activar para ordenar la columna de manera ascendente"><div class="dataTables_sizing" style="height:0;overflow:hidden;">DNI</div></th><th class="sorting" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 149px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Temperatura: Activar para ordenar la columna de manera ascendente"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Temperatura</div></th><th class="sorting" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 181px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Tipo Trabajador: Activar para ordenar la columna de manera ascendente"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Tipo Trabajador</div></th><th class="sorting_asc" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 303px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Nombre Trabajador: Activar para ordenar la columna de manera descendente" aria-sort="ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Nombre Trabajador</div></th><th class="sorting" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 101px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Campo: Activar para ordenar la columna de manera ascendente"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Campo</div></th><th class="sorting" aria-controls="containergridTemperatura" rowspan="1" colspan="1" style="width: 173px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Registrado Por: Activar para ordenar la columna de manera ascendente"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Registrado Por</div></th></tr></thead><tbody><tr role="row" class="odd"><td><span class="hidden">20200630</span> 30/06/2020</td><td>39035230</td><td><span class="badge  badge-pill badge-success">36.8</span> </td><td><span class="badge  badge-pill badge-secondary">Local</span> </td><td class="sorting_1">@Html.DisplayFor(model => model.Nombre)</td><td>Concorida</td><td>Daniela</td></tr><tr role="row" class="even"><td><span class="hidden">20200701</span> 01/07/2020</td><td>39035230</td><td><span class="badge  badge-pill badge-success">36.8</span> </td><td><span class="badge  badge-pill badge-secondary">Local</span> </td><td class="sorting_1">@Html.DisplayFor(model => model.Nombre)</td><td>Concorida</td><td>Daniela</td></tr></tbody></table></div></div></div></div>    
+                       </div>
+
+                    </div>
+                </div>
+                <!-- Personal-Information -->
+            </div>
+
+
+            <div class="tab-pane" id="settings-2" style="display: none;">
+                <!-- Personal-Information -->
+                <div class="panel panel-default panel-fill">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Observaciones</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form"> 
+                            <div class="form-group">
+                                <label for="AboutMe">Agregar obersavación a @Html.DisplayFor(model => model.Nombre)</label>
+                                <textarea style="height: 125px" id="AboutMe" class="form-control"> Observaciones </textarea>
+                            </div>
+                            <button class="btn btn-primary waves-effect waves-light w-md" type="submit">Guardar</button>
+                        </form> 
+                    </div>
+                </div>
+                <!-- Personal-Information -->
+            </div>
+        </div>
+    </div>
+</div> 

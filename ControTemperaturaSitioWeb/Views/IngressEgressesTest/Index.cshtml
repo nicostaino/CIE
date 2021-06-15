@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Clases.Models.IngressEgress>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Contractor.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Foreman.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Land.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeEmployee.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserEgressRegister.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserIngressRegister.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RetiredBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IngressDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EgressDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentEmployee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentForeman)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSyncToVisma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.groupNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isForeman)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contractor.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Foreman.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Land.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeEmployee.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserEgressRegister.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserIngressRegister.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RetiredBefore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionOut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IngressDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EgressDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentEmployee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentForeman)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSyncToVisma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.groupNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isForeman)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) | 
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

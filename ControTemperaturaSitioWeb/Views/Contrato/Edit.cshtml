@@ -1,0 +1,128 @@
+﻿@model Clases.Models.Contract
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section Scripts
+{
+    <script>
+        //$(".datepicker").datetimepicker({
+        //    //format: "mm/dd/yyyy"
+        //    format: "DD/MM/YYYY"
+        //});
+
+        $(".datepicker").datepicker({
+            format: "dd/mm/yyyy"
+        });
+
+        $.validator.addMethod('date',
+            function (value, element) {
+                return true; // since MVC4 data-val-date is put on EVERY vm date property. Default implementation does not allow for multiple cultures...
+            });
+    </script>
+}
+<script>
+
+
+    function asignarOficio(Oficio, Contrato, me) {
+        $.ajax({
+            url: sitepath + "Contrato/addOficio?agregar=" + $(me).prop('checked') + "&Oficio=" + Oficio + "&IdContrato=" + Contrato,
+            success: function (result) {
+
+                console.log(result);
+
+                $.unblockUI();
+
+            }
+        });
+    }
+
+
+</script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Editar Contrato</h3></div>
+            <div class="panel-body">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.Id)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ContractorId, "ContractorId", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("ContractorId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ContractorId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DateStart, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.DateStart, new { htmlAttributes = new { @class = "form-control datepicker"} })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DateEnd, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.DateEnd, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Save" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+
+
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+
+    <div class="col-sm-12">
+        <div class="panel panel-color panel-success">
+            <div class="panel-heading"><h3 class="panel-title">Oficios del contrato</h3></div>
+            <div class="panel-body">
+
+                @foreach (var Rol in ViewBag.Oficios)
+                {
+                    <div class="col-sm-3">
+                        <div class="checkbox checkbox-primary" style="padding-top: 20px;">
+                            <input id="@Rol.Description" type="checkbox" @Rol.estado onclick="asignarOficio(@Rol.Id, @Model.Id, this )">
+                            <label for="@Rol.Description">
+                                @Rol.Description
+                            </label>
+                        </div>
+                    </div>
+                }
+
+            </div> <!-- panel-body -->
+
+
+
+
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div>
+

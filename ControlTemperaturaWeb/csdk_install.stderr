@@ -1,0 +1,1471 @@
+__________________________________________________________________________
+
+InstallAnywhere 2011
+Version: 12.5
+__________________________________________________________________________
+
+Wed Aug 29 17:35:51 UYT 2018
+
+Free Memory: 56229 kB
+Total Memory: 65536 kB
+
+No Arguments
+
+java.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\InstallerData
+
+sun.boot.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\bin\default\jclSC160\vm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\annotation.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\beans.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\java.util.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\jndi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\logging.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\security.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\sql.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmorb.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmorbapi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmcfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\rt.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\charsets.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\resources.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmpkcs.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmcertpathfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmjgssfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmjssefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmsaslfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmjcefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmjgssprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmjsseprovider2.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmcertpathprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ibmxmlcrypto.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\management-agent.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\xml.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\jlm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\javascript.jar
+
+java.ext.dirs:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre\lib\ext
+
+java.version                  == 1.6.0 (Java 1)
+java.vm.name                  == IBM J9 VM
+java.vm.vendor                == IBM Corporation
+java.vm.version               == 2.4
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Sun Microsystems Inc.
+java.vm.specification.version == 1.0
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Sun Microsystems Inc.
+java.specification.version    == 1.6
+java.vendor                   == IBM Corporation
+java.vendor.url               == http://www.ibm.com/
+java.class.version            == 50.0
+java.compiler                 == j9jit24
+java.home                     == C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows\resource\jre\jre
+java.io.tmpdir                == C:\Users\lgnocchi\AppData\Local\Temp\
+os.name                       == Windows Vista
+os.arch                       == amd64
+os.version                    == 6.2 build 9200
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == lgnocchi
+user.home                     == C:\Users\lgnocchi
+user.dir                      == C:\Users\lgnocchi\AppData\Local\Temp\I1535574928\Windows
+user.language                 == en
+user.region                   == null
+__________________________________________________________________________
+
+
+Loading externalized properties
+System's temporary directory = C:\Users\lgnocchi\AppData\Local\Temp
+Prerequisite check ERROR: 
+Unable to determine prerequisites
+Prerequisite check ERROR: 
+cannot find uname in /bin or /usr/sbin
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Microsoft\MSDTC name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+#
+# INSTALLING VM: C:\Program Files\IBM Informix Client SDK\extend\krakatoa
+#
+XMLScriptWriter: No Installation Objects were skipped
+Installer: No 'sea_loc' in working directory, could not define $EXTRACTOR_EXECUTABLE$
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+PerformXSLT: transformation completed successfully
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+***** 2 ReplayVariables for CreateDialog named LAUNCH_DSDP
+SHUTDOWN REQUESTED
+
+REGISTRY ALREADY STORED!
+
+Exiting with exit code: 0
+cleanUp()
+calling cleanUpWin32()
+
+__________________________________________________________________________
+
+InstallAnywhere 2011
+Version: 12.5
+__________________________________________________________________________
+
+Thu Aug 30 09:12:49 UYT 2018
+
+Free Memory: 56228 kB
+Total Memory: 65536 kB
+
+No Arguments
+
+java.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\InstallerData
+
+sun.boot.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\bin\default\jclSC160\vm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\annotation.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\beans.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\java.util.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\jndi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\logging.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\security.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\sql.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmorb.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmorbapi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmcfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\rt.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\charsets.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\resources.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmpkcs.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmcertpathfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmjgssfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmjssefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmsaslfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmjcefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmjgssprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmjsseprovider2.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmcertpathprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ibmxmlcrypto.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\management-agent.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\xml.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\jlm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\javascript.jar
+
+java.ext.dirs:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre\lib\ext
+
+java.version                  == 1.6.0 (Java 1)
+java.vm.name                  == IBM J9 VM
+java.vm.vendor                == IBM Corporation
+java.vm.version               == 2.4
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Sun Microsystems Inc.
+java.vm.specification.version == 1.0
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Sun Microsystems Inc.
+java.specification.version    == 1.6
+java.vendor                   == IBM Corporation
+java.vendor.url               == http://www.ibm.com/
+java.class.version            == 50.0
+java.compiler                 == j9jit24
+java.home                     == C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows\resource\jre\jre
+java.io.tmpdir                == C:\Users\lgnocchi\AppData\Local\Temp\
+os.name                       == Windows Vista
+os.arch                       == amd64
+os.version                    == 6.2 build 9200
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == lgnocchi
+user.home                     == C:\Users\lgnocchi
+user.dir                      == C:\Users\lgnocchi\AppData\Local\Temp\I1535631149\Windows
+user.language                 == en
+user.region                   == null
+__________________________________________________________________________
+
+
+Loading externalized properties
+System's temporary directory = C:\Users\lgnocchi\AppData\Local\Temp
+Prerequisite check ERROR: 
+Unable to determine prerequisites
+Prerequisite check ERROR: 
+cannot find uname in /bin or /usr/sbin
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Implemented Categories name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Implemented Categories\{40FC6ED5-2438-11CF-A3DB-080036F12502} name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Programmable name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{BD1C298B-C6D3-4925-A21D-81C0333D286D}\Programmable name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\IBM name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\IBM\IBM Informix Client SDK name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\IBM\IBM Informix Client SDK\4.10 name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Informix name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Informix\netrc name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft\.NETFramework name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\AssemblyFolders name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix ORDBMS name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix ORDBMS\1.0 name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix-Connect name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix-Connect\4.10.TC1 name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Setup name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Microsoft\MSDTC name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+#
+# INSTALLING VM: C:\Program Files\IBM Informix Client SDK\extend\krakatoa
+#
+XMLScriptWriter: No Installation Objects were skipped
+Installer: No 'sea_loc' in working directory, could not define $EXTRACTOR_EXECUTABLE$
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+PerformXSLT: transformation completed successfully
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+***** 2 ReplayVariables for CreateDialog named LAUNCH_DSDP
+SHUTDOWN REQUESTED
+
+REGISTRY ALREADY STORED!
+
+Exiting with exit code: 0
+cleanUp()
+calling cleanUpWin32()
+
+__________________________________________________________________________
+
+InstallAnywhere 2011
+Version: 12.5
+__________________________________________________________________________
+
+Thu Aug 30 10:14:08 UYT 2018
+
+Free Memory: 56228 kB
+Total Memory: 65536 kB
+
+No Arguments
+
+java.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\InstallerData
+
+sun.boot.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\bin\default\jclSC160\vm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\annotation.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\beans.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\java.util.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\jndi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\logging.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\security.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\sql.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmorb.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmorbapi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmcfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\rt.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\charsets.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\resources.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmpkcs.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmcertpathfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmjgssfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmjssefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmsaslfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmjcefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmjgssprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmjsseprovider2.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmcertpathprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ibmxmlcrypto.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\management-agent.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\xml.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\jlm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\javascript.jar
+
+java.ext.dirs:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre\lib\ext
+
+java.version                  == 1.6.0 (Java 1)
+java.vm.name                  == IBM J9 VM
+java.vm.vendor                == IBM Corporation
+java.vm.version               == 2.4
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Sun Microsystems Inc.
+java.vm.specification.version == 1.0
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Sun Microsystems Inc.
+java.specification.version    == 1.6
+java.vendor                   == IBM Corporation
+java.vendor.url               == http://www.ibm.com/
+java.class.version            == 50.0
+java.compiler                 == j9jit24
+java.home                     == C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows\resource\jre\jre
+java.io.tmpdir                == C:\Users\lgnocchi\AppData\Local\Temp\
+os.name                       == Windows Vista
+os.arch                       == amd64
+os.version                    == 6.2 build 9200
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == lgnocchi
+user.home                     == C:\Users\lgnocchi
+user.dir                      == C:\Users\lgnocchi\AppData\Local\Temp\I1535634821\Windows
+user.language                 == en
+user.region                   == null
+__________________________________________________________________________
+
+
+Loading externalized properties
+System's temporary directory = C:\Users\lgnocchi\AppData\Local\Temp
+Prerequisite check ERROR: 
+Unable to determine prerequisites
+Prerequisite check ERROR: 
+cannot find uname in /bin or /usr/sbin
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Implemented Categories name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Implemented Categories\{40FC6ED5-2438-11CF-A3DB-080036F12502} name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Programmable name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Microsoft\MSDTC name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+#
+# INSTALLING VM: C:\Program Files\IBM Informix Client SDK\extend\krakatoa
+#
+XMLScriptWriter: No Installation Objects were skipped
+Installer: No 'sea_loc' in working directory, could not define $EXTRACTOR_EXECUTABLE$
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+PerformXSLT: transformation completed successfully
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+***** 2 ReplayVariables for CreateDialog named LAUNCH_DSDP
+SHUTDOWN REQUESTED
+
+REGISTRY ALREADY STORED!
+
+Exiting with exit code: 0
+cleanUp()
+calling cleanUpWin32()
+
+__________________________________________________________________________
+
+InstallAnywhere 2011
+Version: 12.5
+__________________________________________________________________________
+
+Thu Aug 30 12:10:24 UYT 2018
+
+Free Memory: 50506 kB
+Total Memory: 65536 kB
+
+No Arguments
+
+java.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\InstallerData
+
+sun.boot.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\bin\default\jclSC170\vm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\se-service.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\math.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\jlm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmorb.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmorbapi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmcfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmpkcs.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmcertpathfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmjgssfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmjssefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmsaslfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmjcefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmjgssprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmjsseprovider2.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ibmcertpathprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\xmldsigfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\xml.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\charsets.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\resources.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\rt.jar
+
+java.ext.dirs:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre\lib\ext
+
+java.version                  == 1.7.0 (Java 1)
+java.vm.name                  == IBM J9 VM
+java.vm.vendor                == IBM Corporation
+java.vm.version               == 2.6
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Sun Microsystems Inc.
+java.vm.specification.version == 1.0
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Sun Microsystems Inc.
+java.specification.version    == 1.7
+java.vendor                   == IBM Corporation
+java.vendor.url               == http://www.ibm.com/
+java.class.version            == 51.0
+java.compiler                 == j9jit26
+java.home                     == C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows\resource\jre\jre
+java.io.tmpdir                == C:\Users\lgnocchi\AppData\Local\Temp\
+os.name                       == Windows
+os.arch                       == x86
+os.version                    == 6.3
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == lgnocchi
+user.home                     == C:\Users\lgnocchi
+user.dir                      == C:\Users\lgnocchi\AppData\Local\Temp\I1535641796\Windows
+user.language                 == en
+user.region                   == null
+__________________________________________________________________________
+
+
+SHUTDOWN REQUESTED
+System's temporary directory = /tmp
+Exiting with exit code: 2006
+cleanUp()
+calling cleanUpUNIX()
+Command.run(): Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified.
+__________________________________________________________________________
+
+InstallAnywhere 2011
+Version: 12.5
+__________________________________________________________________________
+
+Fri Aug 31 16:55:38 UYT 2018
+
+Free Memory: 56214 kB
+Total Memory: 65536 kB
+
+No Arguments
+
+java.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\InstallerData\Resource1.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\InstallerData
+
+ZGUtil.CLASS_PATH:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData\IAClasses.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData\Execute.zip
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\InstallerData
+
+sun.boot.class.path:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\bin\default\jclSC160\vm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\annotation.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\beans.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\java.util.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\jndi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\logging.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\security.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\sql.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmorb.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmorbapi.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmcfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\rt.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\charsets.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\resources.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmpkcs.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmcertpathfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmjgssfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmjssefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmsaslfw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmjcefw.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmjgssprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmjsseprovider2.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmcertpathprovider.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ibmxmlcrypto.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\management-agent.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\xml.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\jlm.jar
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\javascript.jar
+
+java.ext.dirs:
+    C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre\lib\ext
+
+java.version                  == 1.6.0 (Java 1)
+java.vm.name                  == IBM J9 VM
+java.vm.vendor                == IBM Corporation
+java.vm.version               == 2.4
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Sun Microsystems Inc.
+java.vm.specification.version == 1.0
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Sun Microsystems Inc.
+java.specification.version    == 1.6
+java.vendor                   == IBM Corporation
+java.vendor.url               == http://www.ibm.com/
+java.class.version            == 50.0
+java.compiler                 == j9jit24
+java.home                     == C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows\resource\jre\jre
+java.io.tmpdir                == C:\Users\lgnocchi\AppData\Local\Temp\
+os.name                       == Windows Vista
+os.arch                       == amd64
+os.version                    == 6.2 build 9200
+path.separator                == ;
+file.separator                == \
+file.encoding                 == Cp1252
+user.name                     == lgnocchi
+user.home                     == C:\Users\lgnocchi
+user.dir                      == C:\Users\lgnocchi\AppData\Local\Temp\I1535745305\Windows
+user.language                 == en
+user.region                   == null
+__________________________________________________________________________
+
+
+Loading externalized properties
+System's temporary directory = C:\Users\lgnocchi\AppData\Local\Temp
+Prerequisite check ERROR: 
+Unable to determine prerequisites
+Prerequisite check ERROR: 
+cannot find uname in /bin or /usr/sbin
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Prerequisite check ERROR: 
+Missing shared library files: msvcm90.dll, msvcr90.dll, msvcp90.dll
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Implemented Categories name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Implemented Categories\{40FC6ED5-2438-11CF-A3DB-080036F12502} name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{10D8B77C-E14F-11D6-95ED-00902778A242}\Programmable name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CLASSES_ROOT\CLSID\{BD1C298B-C6D3-4925-A21D-81C0333D286D}\Programmable name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\IBM name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\IBM\IBM Informix Client SDK name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\IBM\IBM Informix Client SDK\4.10 name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Informix name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Informix\netrc name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft\.NETFramework name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\AssemblyFolders name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix ORDBMS name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix ORDBMS\1.0 name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix-Connect name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Informix-Connect\4.10.TC1 name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Informix\Setup name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+Reg Type 0 is unknown
+Couldn't get the value for: Registry Key HKEY_LOCAL_MACHINE\Software\Microsoft\MSDTC name: . Returning null
+Win32 error:  1 ERROR_INVALID_FUNCTION
+com.zerog.util.nativelib.win32.Win32Exception: Win32 error:  1 ERROR_INVALID_FUNCTION
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValueJNI(Native Method)
+	at com.zerog.util.nativelib.win32.Registry.getBinaryValue(DashoA10*..)
+	at ZeroGwq.b(DashoA10*..)
+	at ZeroGgk.a(DashoA10*..)
+	at ZeroGgj.a(DashoA10*..)
+	at com.zerog.ia.installer.actions.SpeedRegistry.installSelf(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.GhostDirectory.install(DashoA10*..)
+	at com.zerog.ia.installer.InstallablePiece.install(DashoA10*..)
+	at com.zerog.ia.installer.Installer.install(DashoA10*..)
+	at com.zerog.ia.installer.actions.InstallProgressAction.n(DashoA10*..)
+	at com.zerog.ia.installer.actions.ProgressPanelAction$1.run(DashoA10*..)
+Key_Only && trueParentKey = true.
+#
+# INSTALLING VM: C:\Program Files\IBM Informix Client SDK\extend\krakatoa
+#
+XMLScriptWriter: No Installation Objects were skipped
+Installer: No 'sea_loc' in working directory, could not define $EXTRACTOR_EXECUTABLE$
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+PerformXSLT: transformation completed successfully
+Retrying Installables deferred in pass 0
+Deferral retries done because: 
+There were no deferrals in the last pass.
+***** 2 ReplayVariables for CreateDialog named LAUNCH_DSDP
+SHUTDOWN REQUESTED
+
+REGISTRY ALREADY STORED!
+
+Exiting with exit code: 0
+cleanUp()
+calling cleanUpWin32()
+

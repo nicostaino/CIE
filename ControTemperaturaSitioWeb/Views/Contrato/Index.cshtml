@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Clases.Models.Contract>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="panel">
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="m-b-30">
+                    <h4>Contratos</h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="m-b-30 text-right">
+                    <a id="addToTable" class="btn btn-primary waves-effect waves-light" href="@Url.Action("Create")">Agregar <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped" id="datatable-editable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contractor.Name)
+                    </th>
+                   
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateStart)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateEnd)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contractor.Name)
+                        </td>
+                       
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                        
+                            @(item.DateStart.ToString("dd/MM/yyyy") ?? String.Empty)
+                        </td>
+                        <td>
+                            @(item.DateEnd.ToString("dd/MM/yyyy") ?? String.Empty)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Contrato", new { id = item.Id })" class="on-default edit-row" title=" Editar Contrato"><i class="fa fa-pencil"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- end: page -->
+
+</div>

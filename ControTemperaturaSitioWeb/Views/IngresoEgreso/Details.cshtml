@@ -1,0 +1,83 @@
+﻿@model Clases.Models.IngressEgress
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IngressEgress</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Land.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Land.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEgressRegister.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEgressRegister.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RetiredBefore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RetiredBefore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IngressDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IngressDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EgressDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EgressDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSyncToVisma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsSyncToVisma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

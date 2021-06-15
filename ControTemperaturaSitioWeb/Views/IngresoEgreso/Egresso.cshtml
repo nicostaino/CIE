@@ -1,0 +1,178 @@
+﻿@model IEnumerable<ControTemperaturaSitioWeb.Controllers.EgresosFromView>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section Scripts
+{
+    <script>
+        var sitepath = "";
+        $(document).ready(function () {
+        sitepath = '@(string.Format("{0}://{1}{2}",Request.Url.Scheme, Request.Url.Authority, Url.Content("~")))';
+        $('#datatable-editable').DataTable({
+            language: tableLang,
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'excel',
+                    text: '<i class="glyphicon glyphicon-save"></i> Descargar Excel',
+                    className: 'hidden exportexcel',
+                    filename: 'Ingreso y Egresos',
+                }]
+            });
+            $('#datepickerHasta').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es"
+            });
+            $('#datepickerDesde').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es"
+            });
+        });
+        function buscar()  {
+            window.location.href = sitepath + "IngresoEgreso/Egresso2?desde=" + $('#datepickerDesde').val() + "&hasta=" + $('#datepickerHasta').val()
+        }
+        function getFile() {
+            window.location.href = sitepath + "IngresoEgreso/getFileEgreso?desde=" + $('#datepickerDesde').val() + "&hasta=" + $('#datepickerHasta').val()
+        }
+        function GetFileEgresosCorvus() {
+            window.location.href = sitepath + "IngresoEgreso/GetFileCorvusEgreso?desde=" + $('#datepickerDesde').val() + "&hasta=" + $('#datepickerHasta').val()
+        }
+
+    </script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js    "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js     "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js      "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js   "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js     "></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js     "></script>
+}
+<div class="panel">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="m-b-30">
+
+
+                    <label>Fecha Desde</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" value="@ViewBag.Desde" id="datepickerDesde">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div><!-- input-group -->
+                </div><!-- input-group -->
+            </div><!-- input-group -->
+            <div class="col-sm-3">
+                <div class="m-b-30">
+                    <label>Fecha Hasta</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="dd/mm/yyyy" value="@ViewBag.Hasta" id="datepickerHasta">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div><!-- input-group -->
+                </div>
+            </div>
+            <div class="col-sm-6">
+
+
+                <div class="m-b-30 text-right" style="margin-top: 21px;">
+                    <a id="-" class="btn btn-primary  waves-effect waves-light" onclick="buscar()">Buscar  <i class="fa fa-search"></i></a>
+
+                    <a id="a" class="btn btn-info  waves-effect waves-light" onclick="getFile()">Archivo Pampero  <i class="fa fa-plus"></i></a>
+
+                    <a id="bb" class="btn btn-info  waves-effect waves-light" onclick="GetFileEgresosCorvus()">Archivo Corvus  <i class="fa fa-plus"></i></a>
+
+                    <a id="addToTable" onclick="$('.exportexcel').click()" class="btn btn-success waves-effect waves-light">Exportar a excel  <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped" id="datatable-editable">
+            <thead>
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Apellido
+                    </th>
+                    <th>
+                        Documento
+                    </th>
+                    <th>
+                        Acción
+                    </th>
+                    @*<th>
+                            Registro la salida
+                        </th>*@
+                    <th>
+                        Se retiro especial?
+                    </th>
+                    <th>
+                        Descripción salida
+                    </th>
+
+                    <th>
+                        Fecha salida
+                    </th>
+
+                    <th>Hora salida</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in ViewBag.Ingresos)
+                {
+                    <tr>
+                        <td>
+                            @item.Employee.Nombre
+                        </td>
+                        <td>
+                            @item.Employee.Apellido
+                        </td>
+                        <td>
+                            @item.Employee.Documento
+                        </td>
+                        <td>
+
+                            <span class="label label-success">Egreso</span>
+
+                        </td>
+                        @*<td>
+
+                            @if (item.User != null)
+                            {
+                                @item.User
+                            }
+                            </td>*@
+                        <td>
+                            @if (item.retiredbefore == 0)
+                            {<span class="label label-primary">No</span> }
+                            else
+                            {
+                                <span class="label label-danger">Si</span>
+                            }
+
+                        </td>
+                        <td>
+                            @item.descriptionout
+                        </td>
+                        <td>
+                            @item.egressDateTime.ToString("dd/MM/yyyy")
+                        </td>
+                        <td>
+                            @item.egressDateTime.ToString("hh:mm:ss")
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- end: page -->
+</div>
+
+

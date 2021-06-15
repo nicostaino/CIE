@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Clases.Models.TypeEmployee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="panel">
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="m-b-30">
+                    <h4>Oficios</h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="m-b-30 text-right">
+                    <a id="addToTable" class="btn btn-primary waves-effect waves-light" href="@Url.Action("Create")">Agregar <i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped" id="datatable-editable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "TipoTrabajador", new { id = item.Id })" class="on-default edit-row" title=" Editar Trabajador"><i class="fa fa-pencil"></i></a>
+                             </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- end: page -->
+</div>
+
