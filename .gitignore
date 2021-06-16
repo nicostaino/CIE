@@ -3,3 +3,10 @@
 ################################################################################
 
 /AccessoADatos/bin/Debug
+/Clases/bin/Debug
+*/bin
+*/obj
+*/DSebug
+/packages
+/.vs
+*.user
